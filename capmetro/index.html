@@ -2,9 +2,34 @@
 <html>
   <head>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+      function rideClick() {
+        $("#loading").css("display", "flex");
+        setTimeout(()=>{
+          $("#ride").css("display", "none");
+          $("#loading").css("display", "none");
+          $("#tickets-screen").css("border-radius", "30px");
+          $("#tickets-screen").animate({
+            "width": "90vw",
+            "top": "2vh"
+          })
+        }, 1250);
+      }
+    </script>
+    <style>
+      #loading {
+        display: none;
+      }
+    </style>
   </head>
-  <body>
-    <h1>Test</h1>
-    <img src="favicon.ico"/>
+  <body style="margin:0px; overflow: hidden; display: flex; justify-content: center; background-color: black;">
+    <div id="tickets-screen" style="width:100vw; height: 100vh; position: fixed; background: url('bg.png'); background-position: top; background-size: contain; display: flex; align-items: center; justify-content: center; bottom: 0px;">
+      <div id="loading" style="height:36vw; width: 36vw; background: url('loading.png'); background-position: center; background-size: cover; justify-content: center;">
+        <img src="loading.gif" style="height:12vw; width:12vw; margin-top: -20px; margin-top: 10vw;"/>
+      </div>
+    </div>
+    <div id="ride" onclick="rideClick()" style="height: 22.5vh; width: 98vw; top: 23.25vh; position: absolute;"></div>
   </body>
 </html>
