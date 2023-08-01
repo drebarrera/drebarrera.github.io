@@ -12,10 +12,14 @@
         setTimeout(()=>{
           $("#ride").css("display", "none");
           $("#loading").css("display", "none");
+          $("#footer").css("display", "none");
           $("#tickets-screen").css({"border-radius": "30px", "background-size": "contain"});
           $("#tickets-screen").animate({
             "width": "90vw",
-            "top": "2vh"
+            "top": "4vh"
+          });
+          $("#ticket").animate({
+            "top": "0vh"
           })
         }, 1250);
       }
@@ -33,6 +37,7 @@
       </div>
     </div>
     <div id="ride" onclick="rideClick()" style="height: 22.5vh; width: 98vw; top: 23.25vh; position: absolute;"></div>
-    <img src="footer.png" style="position: fixed; width: 100vw; bottom: 0;"/>
+    <div id="ticket" style="width: 100vw; height: 100vh; background: url('ticket.png'); position: absolute; background-size: contain; z-index: 5; top: 100vh;"></div>
+    <img id="footer" src="footer.png" style="position: absolute; width: 100vw; bottom: 0;"/>
   </body>
 </html>
