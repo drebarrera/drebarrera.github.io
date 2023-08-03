@@ -41,8 +41,8 @@
       }
 
       .slide {
-        animation: validateSlide 12s linear infinite;
-        -webkit-animation:validateSlide 12s linear infinite;
+        animation: validateSlide 10s linear infinite;
+        -webkit-animation:validateSlide 10s linear infinite;
       }
 
       @keyframes validateWatermark {
@@ -108,7 +108,7 @@
           <div class="slideT" style="height: 0; width: 0; border-right: 2.5vh solid transparent; border-top: 2.5vh solid #88a3ca;"></div>
         </div>
       </div>
-      <div id="qr-button" style="height: 8vh; width: 8vh; margin-top: 81.5vh; margin-left: calc(100vw - 8vh); background-color: green; z-index: 10;" onclick="QR()"></div>
+      <div id="qr-button" style="height: 8vh; width: 8vh; margin-top: 81.5vh; margin-left: calc(100vw - 8vh); background-color: green; z-index: 10; position: absolute;" onclick="QR()"></div>
       <div id="watermark" style="width: 100vw; height: 100vw; top: 33vh; background: url('watermark.png'); background-size: 120vw 120vw; position: absolute; z-index: 8; display: flex; justify-content: center; align-items: center; font-family: Helvetica; font-size: 5.5vw; color: white;"><h1>COMMUTER</h1></div>
     </div>
     <img id="footer" src="footer.png" style="position: absolute; width: 100vw; bottom: 0;"/>
